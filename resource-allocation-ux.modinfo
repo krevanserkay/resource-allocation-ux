@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="resource-allocation-ux" version="10000"
+    xmlns="ModInfo">
+    <Properties>
+        <Name>Resource Allocation UX</Name>
+        <Version>1.0.0</Version>
+        <Description>Ergonomic improvements to the Commerce resource allocation screen: hide ineligible settlements/resources, right-click to unassign, city-first multi-assign mode, ascending/descending sort toggle, and filter-hides in the resource pool.</Description>
+        <Authors>krevan</Authors>
+        <Package>Mod</Package>
+        <AffectsSavedGames>0</AffectsSavedGames>
+    </Properties>
+    <Dependencies>
+        <Mod id="base-standard" title="Base Standard" />
+    </Dependencies>
+    <ActionCriteria>
+        <Criteria id="always">
+            <AlwaysMet/>
+        </Criteria>
+    </ActionCriteria>
+    <ActionGroups>
+        <ActionGroup id="resource-allocation-ux-game" scope="game" criteria="always">
+            <Properties>
+                <LoadOrder>1000</LoadOrder>
+            </Properties>
+            <Actions>
+                <UIScripts>
+                    <Item>ui/commerce/ux-commerce-resources.js</Item>
+                </UIScripts>
+            </Actions>
+        </ActionGroup>
+    </ActionGroups>
+</Mod>
